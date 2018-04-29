@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: aqua;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <MenuBar AnchorPane.bottomAnchor="471.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Plik">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#closeApplication" text="Zamknij" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button layoutX="165.0" layoutY="259.0" mnemonicParsing="false" onAction="#wyswietl_1" prefHeight="31.0" prefWidth="171.0" text="Uruchom Animację" />
+      <Label graphicTextGap="5.0" layoutX="135.0" layoutY="94.0" prefHeight="132.0" prefWidth="237.0" text="Animowana Rybka" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

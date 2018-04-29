@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="628.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AnimationWindowController">
+   <children>
+      <HBox layoutX="1.0" layoutY="14.0" prefHeight="50.0" prefWidth="708.0" spacing="10.0" AnchorPane.bottomAnchor="548.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0">
+               <fill>
+                  <LinearGradient endX="0.2912621359223301" endY="0.05825242718446601" startX="0.2912621359223301" startY="0.7961165048543689">
+                     <stops>
+                        <Stop color="#1278d7" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Button mnemonicParsing="false" onAction="#playAnimation" text="Ryba po linii" />
+            <Button mnemonicParsing="false" onAction="#playAnimationPath" text="Ryba po ścieżce" />
+            <Button mnemonicParsing="false" onAction="#playAnimationPathRandom" text="Generowanie Ryb" />
+            <Button mnemonicParsing="false" onAction="#pauseAnimation" text="Pauza" />
+            <Button mnemonicParsing="false" onAction="#closeWindow" prefHeight="31.0" prefWidth="82.0" text="Zamknij" />
+         </children>
+      </HBox>
+      <Circle fx:id="circle" fill="#1fffbf00" layoutX="305.0" layoutY="220.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="6.0" visible="false" />
+      <Ellipse fx:id="f_body" layoutX="125.0" layoutY="392.0" radiusX="69.0" radiusY="34.0" stroke="#598f63" strokeType="INSIDE">
+         <fill>
+            <RadialGradient centerX="0.5056818181818182" centerY="0.5" focusDistance="0.07317073170731714" radius="0.9634146341463414">
+               <stops>
+                  <Stop color="#f0d600" />
+                  <Stop color="#10e160" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill></Ellipse>
+      <Circle fx:id="f_eye" fill="#1d1c1ef5" layoutX="169.0" layoutY="377.0" radius="5.0" stroke="#180d65" strokeType="INSIDE" />
+      <Polygon fx:id="f_finLeft" layoutX="56.0" layoutY="402.0" rotate="90.0" scaleX="0.5" scaleY="0.5" stroke="#598f63" strokeType="INSIDE">
+        <points>
+          <Double fx:value="-50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="0.0" />
+          <Double fx:value="-60.0" />
+        </points>
+         <fill>
+            <LinearGradient endX="0.8300970873786407" endY="0.7475728155339806" startX="0.3203883495145631" startY="0.21359223300970875">
+               <stops>
+                  <Stop color="#abdb09f2" />
+                  <Stop color="#cd1212" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Polygon>
+      <Circle fx:id="b1" fill="#217eff6c" layoutX="182.0" layoutY="408.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Polygon fx:id="f_finRight" layoutX="450.0" layoutY="402.0" rotate="-90.0" scaleX="0.5" scaleY="0.5" stroke="#598f63" strokeType="INSIDE" visible="false">
+         <points>
+            <Double fx:value="-50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="0.0" />
+            <Double fx:value="-60.0" />
+         </points>
+         <fill>
+            <LinearGradient endX="0.8300970873786407" endY="0.7475728155339806" startX="0.3203883495145631" startY="0.21359223300970875">
+               <stops>
+                  <Stop color="#abdb09f2" />
+                  <Stop color="#cd1212" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Polygon>
+      <Circle fx:id="b2" fill="#217eff6c" layoutX="272.0" layoutY="380.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="b3" fill="#217eff6c" layoutX="390.0" layoutY="330.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="b4" fill="#217eff6c" layoutX="391.0" layoutY="340.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="b5" fill="#217eff6c" layoutX="420.0" layoutY="380.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <ImageView fx:id="img_fish" fitHeight="150.0" fitWidth="200.0" layoutX="56.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@rybka.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img_fish5" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@rybka.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img_fish4" fitHeight="150.0" fitWidth="200.0" layoutX="1.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@rybka.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img_fish3" fitHeight="150.0" fitWidth="200.0" layoutX="30.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@rybka.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="567.0" layoutX="-6.0" layoutY="61.0" opacity="0.47" stroke="BLACK" strokeType="INSIDE" width="722.0">
+         <fill>
+            <LinearGradient endX="0.8398058252427185" endY="0.3980582524271845" startX="0.8349514563106796" startY="0.053398058252427175">
+               <stops>
+                  <Stop color="#f8f9fc" />
+                  <Stop color="#5f0ae8" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+   </children>
+</AnchorPane>
